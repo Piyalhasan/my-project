@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Presidency Hostel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🏠 Presidency</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">home </a></li>
+          <li class="nav-item"><a href="facilities.html" class="nav-link active">facilities</a></li>
+          <li class="nav-item"><a href="booking.html" class="nav-link">booking </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Our Facilities</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-bed fs-1 text-primary"></i><h5>আরামদায়ক রুম</h5><p>বেড, চেয়ার, টেবিল ও Wi-Fi সহ পরিপূর্ণ রুম।</p></div></div>
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-egg-fried fs-1 text-success"></i><h5>৩ বেলা খাবার</h5><p>সকালের নাস্তা, দুপুর ও রাতের খাবার।</p></div></div>
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-book fs-1 text-info"></i><h5>স্টাডি এরিয়া</h5><p>নীরব পরিবেশে পড়াশোনার উপযোগী স্থান।</p></div></div>
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-wifi fs-1 text-warning"></i><h5>হাই স্পিড ইন্টারনেট</h5><p>২৪ ঘণ্টা Wi-Fi সুবিধা।</p></div></div>
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-droplet fs-1 text-primary"></i><h5>নিরাপদ পানি</h5><p>ফিল্টার করা বিশুদ্ধ পানীয় জল।</p></div></div>
+      <div class="col-md-4"><div class="card h-100 text-center p-3"><i class="bi bi-shield-lock fs-1 text-danger"></i><h5>২৪/৭ নিরাপত্তা</h5><p>CCTV এবং নিরাপত্তা প্রহরী দ্বারা মনিটরিং।</p></div></div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="booking.html" class="btn btn-success btn-lg">Book Seat</a>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    © <span id="year"></span> শিখন হোস্টেল.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* General styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7f6;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1c7c54;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Main container */
+.room-list {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+/* Room card */
+.room-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Room image */
+.room-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Room details */
+.room-details {
+  padding: 12px 16px;
+}
+
+.room-details h3 {
+  margin: 5px 0;
+  color: #1c7c54;
+}
+
+.room-details p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* Available button */
+.status-btn {
+  background-color: #21b573;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.status-btn:hover {
+  background-color: #179e5c;
+}
+
+/* Confirmed state */
+.confirmed {
+  background-color: #ffb300 !important;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .room-card {
+    flex-direction: column;
+  }
+
+  .room-img {
+    height: 150px;
+  }
+
+  .room-details {
+    font-size: 14px;
+  }
+
+  .status-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

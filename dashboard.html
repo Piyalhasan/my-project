@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard | Presidency Hostel</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="title">
+      <i class="bi bi-speedometer2"></i>
+      <div>Dashboard</div>
+    </div>
+
+    <div class="profile-wrap">
+      <input id="avatarInput" type="file" accept="image/*" style="display:none" />
+      <div class="avatar" id="avatarBtn" title="Click to upload profile image">
+        <img id="avatarImg" src="" alt="avatar" style="display:none">
+        <i id="avatarPlaceholder" class="bi bi-person-circle" style="font-size:28px; color: rgba(255,255,255,0.95)"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container-main">
+    <div class="category-header">
+      <div class="badge"><i class="bi bi-list-ul"></i></div>
+      <h4>Categories</h4>
+    </div>
+
+    <!-- Grid row -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="dash-card" data-key="room-availability">
+          <div class="icon-wrap">
+            <img src="room.png" alt="Room Availability">
+          </div>
+          <h5>Room Availability</h5>
+          
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="dash-card" data-key="all-issues">
+          <div class="icon-wrap">
+            <img src="reportbox.jpg" alt="All Issues">
+          </div>
+          <h5>All Issues</h5>
+          
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="dash-card" data-key="staff-members">
+          <div class="icon-wrap">
+             <img src="staff.png" alt="Staff members">
+          </div>
+          <h5><a href="Student-frofile.html">Student profile</a> </h5>
+          
+        </div>
+      </div>
+
+      <!--
+
+      <div class="col-md-4">
+        <div class="dash-card" data-key="create-staff">
+          <div class="icon-wrap">
+            <img src="staffs.png" alt="Create Staff">
+          </div>
+          <h5>Create Staff</h5>
+         
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="dash-card" data-key="hostel-fee">
+          <div class="icon-wrap">
+             <img src="money.jpg" alt="Hostel fee">
+          </div>
+          <h5>Hostel Fee</h5>
+         
+        </div>
+      </div>
+    -->
+
+      <div class="col-md-4">
+        <div class="dash-card" data-key="change-request">
+          <div class="icon-wrap">
+            <img src="change.jpg" alt="Change Request">
+          </div>
+          <h5>Change Request</h5>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="dashboard.js"></script>
+</body>
+</html>

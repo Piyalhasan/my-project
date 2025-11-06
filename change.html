@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Change Room</title>
+  <link rel="stylesheet" href="change.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="back">←</button>
+      <h1>Change Room</h1>
+    </header>
+
+    <main class="card">
+      <!-- Current block & room -->
+      <section class="section">
+        <label class="label">Current block and Room no.</label>
+        <div class="pill-row">
+          <div class="pill">Room No - <strong>201</strong></div>
+          <div class="pill">Block No - <strong>B</strong></div>
+        </div>
+      </section>
+
+      <!-- Shift to -->
+      <section class="section">
+        <label class="label">Shift to block and Room no.</label>
+        <div class="grid two">
+          <div class="select-wrap">
+            <select id="blockSelect" aria-label="block">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select id="roomSelect" aria-label="room">
+              <option value="101">101</option>
+              <option value="102">102</option>
+              <option value="103">103</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reason -->
+      <section class="section">
+        <label class="label">Reason for change</label>
+        <textarea id="reason" placeholder="Enter reason..." rows="2"></textarea>
+      </section>
+
+      <!-- Submit -->
+      <section class="section">
+        <button id="submitBtn" class="submit">Submit</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="change.js"></script>
+</body>
+</html>

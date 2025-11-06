@@ -1,0 +1,165 @@
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  background:#fafafa;
+  color:#123;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* App wrapper */
+.app{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Top bar like screenshot */
+.topbar{
+  width:100%;
+  max-width:460px;
+  background:#2e8a3a; /* green */
+  color:white;
+  padding:18px 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:12px;
+}
+.topbar h1{
+  font-size:20px;
+  font-weight:600;
+  margin-left:6px;
+}
+.back{
+  background:transparent;
+  border:none;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  padding:6px 8px;
+  border-radius:8px;
+}
+
+/* Card (form container) */
+.card{
+  width:100%;
+  max-width:460px; /* matches mobile screenshot width */
+  margin:18px;
+  background:transparent;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* Sections */
+.section{
+  background:transparent;
+}
+
+/* Labels */
+.label{
+  display:block;
+  font-weight:700;
+  margin:8px 6px;
+  color:#333;
+  font-size:15px;
+}
+
+/* Pill row for current info */
+.pill-row{
+  display:flex;
+  gap:12px;
+  padding:6px;
+}
+.pill{
+  border:2px solid #cfe9d1;
+  background:white;
+  padding:12px 18px;
+  border-radius:14px;
+  min-width:120px;
+  text-align:center;
+  color:#2f6f35;
+  font-weight:600;
+  box-shadow:0 1px 0 rgba(0,0,0,0.03);
+}
+
+/* grid helpers */
+.grid.two{
+  display:flex;
+  gap:12px;
+}
+.select-wrap{
+  flex:1;
+}
+
+/* Select and textarea styles */
+select, textarea{
+  width:100%;
+  padding:14px 14px;
+  border-radius:14px;
+  border:2px solid #cfe9d1;
+  outline:none;
+  font-size:15px;
+  background:white;
+}
+select:focus, textarea:focus{
+  box-shadow:0 0 0 4px rgba(46,138,58,0.08);
+  border-color:#2e8a3a;
+}
+
+/* Submit button */
+.submit{
+  width:100%;
+  background:#2e8a3a;
+  color:white;
+  font-size:18px;
+  padding:14px;
+  border-radius:18px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  margin-top:8px;
+  box-shadow:0 4px 10px rgba(46,138,58,0.12);
+}
+.submit:active{transform:translateY(1px)}
+
+/* Desktop layout: show some fields side-by-side and center card */
+@media (min-width:900px){
+  body{background:#f2f6f2}
+  .app{align-items:center}
+  .card{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 8px 30px rgba(20,20,20,0.06);
+    max-width:900px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px 28px;
+    align-items:start;
+  }
+
+  /* Place header area across columns */
+  .topbar{max-width:900px;border-radius:16px 16px 0 0}
+  .label{margin:0 0 6px 0}
+
+  /* Make the first pill row span both columns */
+  .card > .section:nth-child(1){grid-column:1 / -1}
+  .card > .section:nth-child(2){grid-column:1 / -1}
+  .card > .section:nth-child(3){grid-column:1 / -1}
+  .card > .section:nth-child(4){grid-column:1 / -1}
+
+  /* But arrange inputs inside second section horizontally */
+  .card .grid.two{flex-direction:row}
+}
+
+/* Small devices tweak */
+@media (max-width:520px){
+  .pill{min-width:110px;padding:10px 12px;font-size:14px}
+  .topbar h1{font-size:18px}
+  .submit{font-size:16px;padding:12px}
+}

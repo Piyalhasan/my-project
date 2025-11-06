@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💰 Payment & Bill Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f7f9fb;
+      font-family: "Poppins", sans-serif;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-custom {
+      border-radius: 25px;
+      font-weight: 600;
+    }
+    .payment-option img {
+      width: 60px;
+      margin: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .payment-option img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <a href="index.html" class="btn btn-secondary mb-4">⬅ Back to Dashboard</a>
+  
+  <div class="card p-4">
+    <h3 class="text-center mb-4">💳 Payment & Bill Management</h3>
+
+    <!-- BILL INPUT FORM -->
+    <form id="billForm">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label>Monthly Rent (Room)</label>
+          <input type="number" class="form-control" id="rent" placeholder="e.g. 2500">
+        </div>
+        <div class="col-md-4">
+          <label>Food Bill</label>
+          <input type="number" class="form-control" id="food" placeholder="e.g. 1800">
+        </div>
+        <div class="col-md-4">
+          <label>Laundry Bill</label>
+          <input type="number" class="form-control" id="laundry" placeholder="e.g. 300">
+        </div>
+        <div class="col-md-4">
+          <label>Electric Bill</label>
+          <input type="number" class="form-control" id="electric" placeholder="e.g. 500">
+        </div>
+        <div class="col-md-4">
+          <label>Water Bill</label>
+          <input type="number" class="form-control" id="water" placeholder="e.g. 200">
+        </div>
+        <div class="col-md-4">
+          <label>Total Amount</label>
+          <input type="text" class="form-control" id="total" readonly>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-custom mt-3" onclick="calculateTotal()">💰 Calculate Total</button>
+    </form>
+
+    <hr class="my-4">
+
+    <!-- PAYMENT OPTIONS -->
+    <h5>Pay Using:</h5>
+    <div class="payment-option d-flex flex-wrap align-items-center">
+      <img src="https://seeklogo.com/images/B/bkash-logo-0C013F5D4D-seeklogo.com.png" alt="Bkash" onclick="alert('Bkash Payment Gateway Coming Soon!')">
+      <img src="https://seeklogo.com/images/N/nagad-logo-8E3CB4A7F2-seeklogo.com.png" alt="Nagad" onclick="alert('Nagad Payment Gateway Coming Soon!')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa Card" onclick="alert('Card Payment Coming Soon!')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mastercard-logo.png" alt="MasterCard" onclick="alert('Card Payment Coming Soon!')">
+    </div>
+
+    <div class="text-end mt-4">
+      <button class="btn btn-success btn-custom" onclick="downloadInvoice()">📄 Download Invoice</button>
+    </div>
+  </div>
+
+  <!-- PAYMENT HISTORY -->
+  <div class="card p-4 mt-4">
+    <h5 class="mb-3">📘 Payment History</h5>
+    <table class="table table-bordered table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>Date</th>
+          <th>Month</th>
+          <th>Total Bill (৳)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>05 Oct 2025</td>
+          <td>September</td>
+          <td>৳5,300</td>
+          <td><span class="badge bg-success">Paid</span></td>
+        </tr>
+        <tr>
+          <td>05 Sep 2025</td>
+          <td>August</td>
+          <td>৳5,000</td>
+          <td><span class="badge bg-success">Paid</span></td>
+        </tr>
+        <tr>
+          <td>05 Aug 2025</td>
+          <td>July</td>
+          <td>৳4,900</td>
+          <td><span class="badge bg-danger">Pending</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function calculateTotal() {
+    let rent = Number(document.getElementById('rent').value) || 0;
+    let food = Number(document.getElementById('food').value) || 0;
+    let laundry = Number(document.getElementById('laundry').value) || 0;
+    let electric = Number(document.getElementById('electric').value) || 0;
+    let water = Number(document.getElementById('water').value) || 0;
+    let total = rent + food + laundry + electric + water;
+    document.getElementById('total').value = "৳ " + total;
+  }
+
+  function downloadInvoice() {
+    alert("💾 Invoice PDF Download feature coming soon!");
+  }
+</script>
+
+</body>
+</html>

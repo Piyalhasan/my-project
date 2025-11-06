@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Issue</title>
+  <link rel="stylesheet" href="issue.css" />
+</head>
+<body>
+
+  <header>
+    <h2>Create Issue</h2>
+  </header>
+
+  <main class="form-container">
+    <form id="issueForm">
+      <label for="roomNumber">Room Number</label>
+      <input type="text" id="roomNumber" placeholder="201" required />
+
+      <label for="blockNumber">Block Number</label>
+      <input type="text" id="blockNumber" placeholder="B" required />
+
+      <label for="email">Your Email ID</label>
+      <input type="email" id="email" placeholder="example@gmail.com" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="9003298398" required />
+
+      <label for="issueType">Issue you are facing?</label>
+      <select id="issueType" required>
+        <option value="">Select Issue</option>
+        <option value="Bathroom">Bathroom</option>
+        <option value="Electricity">Electricity</option>
+        <option value="WiFi">WiFi</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="comment">Comment</label>
+      <textarea id="comment" rows="2" placeholder="Leakage" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="issue.js"></script>
+</body>
+</html>

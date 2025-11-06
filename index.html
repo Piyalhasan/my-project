@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PRESIDENCY HOSTEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🏠 PRESIDENCY HOSTEL </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a href="index.html" class="nav-link active"> home </a></li>
+          <li class="nav-item"><a href="facilities.html" class="nav-link"> facilities </a></li>
+          <li class="nav-item"><a href="booking.html" class="nav-link">booking</a></li>
+          <!-- Login & Signup Buttons -->
+          <li class="nav-item ms-lg-3">
+            <a href="login page.html" class="btn btn-outline-light btn-sm me-2">Login</a>
+            <a href="signup.html" class="btn btn-success btn-sm">Sign Up</a>
+             <a href="admin.html" class="btn btn-success btn-sm">admin</a>
+             
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero d-flex align-items-center justify-content-center text-center text-white">
+    <div>
+      <h1 class="fw-bold">PRESIDENCY HOSTEL</h1>
+      <p>Safe, Comfortable, and Study-Friendly Hostel</p>
+      <a href="facilities.html" class="btn btn-light btn-lg m-2">View Facilities</a>
+      <a href="booking.html" class="btn btn-success btn-lg m-2">Book Seat</a>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="container py-5">
+    <h3 class="text-center mb-4">Our Specialties</h3>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="bi bi-house-door fs-2 text-primary"></i>
+        <h5>Comfortable Room</h5>
+        <p>Rooms equipped with AC, bed, table, chair, and wardrobe</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-egg-fried fs-2 text-success"></i>
+        <h5>Three meals a day.</h5>
+        <p>Breakfast, lunch, and dinner in a healthy way.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-shield-lock fs-2 text-danger"></i>
+        <h5>There is 24-hour security here</h5>
+        <p>Full security system with CCTV and security guards</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    © <span id="year"></span> Presidency hostel. All Rights Reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
